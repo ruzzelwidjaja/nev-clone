@@ -11,7 +11,7 @@ export default function Home() {
         <Header />
       </div>
       <div className="bg-[#f7f2f2]">
-        <div className="relative mx-auto mt-[-10px] pb-20 max-w-[1200px]" style={{ width: '750px' }}>
+        <div className="relative mx-auto mt-[-10px] pb-20 max-w-[1200px]" style={{ width: '870px' }}>
           <MyGridLayout />
         </div>
       </div>

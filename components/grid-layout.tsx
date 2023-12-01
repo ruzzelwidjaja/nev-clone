@@ -13,10 +13,10 @@ interface MyGridLayoutProps {
 const MyGridLayout: React.FC<MyGridLayoutProps> = () => {
   // Define a layout for a 3x3 grid
   const layout: Layout[] = [
-    { i: '1', x: 0, y: 0, w: 2, h: 1 },
+    { i: '1', x: 0, y: 0, w: 2, h: 1 }, 
     { i: '2', x: 1, y: 0, w: 1, h: 1 },
     { i: '3', x: 2, y: 0, w: 1, h: 1 },
-    { i: '4', x: 0, y: 1, w: 1, h: 1 },
+    { i: '4', x: 3, y: 0, w: 1, h: 1 },
     { i: '5', x: 1, y: 1, w: 1, h: 1 },
     { i: '6', x: 2, y: 1, w: 1, h: 1 },
     { i: '7', x: 0, y: 2, w: 1, h: 1 },
@@ -29,13 +29,14 @@ const MyGridLayout: React.FC<MyGridLayoutProps> = () => {
       className="layout"
       layouts={{ lg: layout }}
       breakpoints={{ lg: 1200, md: 960, sm: 768, xs: 480, xxs: 0 }}
-      cols={{ lg: 3, md: 3, sm: 3, xs: 3, xxs: 3 }}
+      cols={{ lg: 4, md: 3, sm: 3, xs: 3, xxs: 3 }}
       autoSize={true}
-      rowHeight={240} // Height of GridWidget + vertical margin
+      rowHeight={280} // Height of GridWidget + vertical margin
+      width={1200}
       isResizable={false}
       isDraggable={true}
-      containerPadding={[10, 10]} // Padding inside the container
-      // margin={[10, 10]} // Margin between items
+      // containerPadding={[16,16]} // Padding inside the container
+      // margin={[16, 16]} // Margin between items
     >
       {layout.map(item => (
         <div key={item.i}>
